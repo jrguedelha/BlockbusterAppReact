@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockbusterAPI", "BlockbusterAPI\BlockbusterAPI.csproj", "{EC57EEF9-0F4E-4646-8475-99BB433CD747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC57EEF9-0F4E-4646-8475-99BB433CD747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC57EEF9-0F4E-4646-8475-99BB433CD747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC57EEF9-0F4E-4646-8475-99BB433CD747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC57EEF9-0F4E-4646-8475-99BB433CD747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5669FF3-FD8D-4CED-AF11-1988A6CDAAEC}
+	EndGlobalSection
+EndGlobal
