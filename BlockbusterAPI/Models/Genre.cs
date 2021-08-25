@@ -9,7 +9,7 @@ namespace BlockbusterAPI.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Release { get; set; }
+        public string ReleaseDate { get; set; }
         public bool IsActive { get; set; }
     }
 }
