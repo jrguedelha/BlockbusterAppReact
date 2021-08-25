@@ -21,9 +21,11 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Get()
         {
             string query = @"
-                            SELECT Id, Title, ReleaseDate, IsActive
-                            FROM dbo.Genre
-                            ";
+                            SELECT Id, Title,
+                            CONVERT(varchar(10),ReleaseDate,120) as ReleaseDate,
+                            IsActive
+                            FROM dbo.Movie
+                           ";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
             SqlDataReader dataReader;
@@ -46,10 +48,14 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Post(Genre genre)
         {
             string query = @"
-                            INSERT INTO dbo.Genre
-                            (Title)
-                            VALUES (@Title)
-                            ";
+                            INSERT INTO dbo.Movie
+                            (Title,ReleaseDate,IsActive,Genre)
+                            VALUES
+                            (
+                            '" + genre.Title + @"'
+                            , '" + genre.ReleaseDate + @"'
+                            , '" + genre.IsActive + @"'
+                            )";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
             SqlDataReader dataReader;
@@ -58,7 +64,6 @@ namespace BlockbusterAPI.Controllers
                 dbConnection.Open();
                 using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@Title", genre.Title);
                     dataReader = sqlCommand.ExecuteReader();
                     table.Load(dataReader);
                     dataReader.Close();
@@ -73,9 +78,11 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Put(Genre genre)
         {
             string query = @"
-                            UPDATE dbo.Genre
-                            SET Title = @Title
-                            WHERE Id = @Id
+                            UPDATE dbo.Movie SET
+                            Title = '" + genre.Title + @"'
+                            , ReleaseDate = '" + genre.ReleaseDate + @"'
+                            , IsActive = '" + genre.IsActive + @"'
+                            WHERE Id = " + genre.Id + @"
                             ";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
@@ -85,8 +92,6 @@ namespace BlockbusterAPI.Controllers
                 dbConnection.Open();
                 using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@Id", genre.Id);
-                    sqlCommand.Parameters.AddWithValue("@Title", genre.Title);
                     dataReader = sqlCommand.ExecuteReader();
                     table.Load(dataReader);
                     dataReader.Close();
@@ -101,9 +106,9 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                            DELETE FROM dbo.Genre
-                            WHERE Id = @Id
-                            ";
+                            DELETE FROM dbo.Movie
+                            WHERE Id = " + id + @"
+                           ";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
             SqlDataReader dataReader;
@@ -112,7 +117,6 @@ namespace BlockbusterAPI.Controllers
                 dbConnection.Open();
                 using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@Id", id);
                     dataReader = sqlCommand.ExecuteReader();
                     table.Load(dataReader);
                     dataReader.Close();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x5FP8gpCOMccTqX6wWacQSbTsir+N/6XRkwS2jWhXjpcrWWPQvMK6VBXg8Iel9M1HbuoTJzkzcDZVV/uG0aDKw==",
+  "dgSpecHash": "70RK8fS3U/swu+leWU2oSV7NkUKLYDQ6f2yv/DWpAALcG0kcHyPgVEioMxRHLUvnOc6KUzkTGsAO8tcbG9MX+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agend\\OneDrive\\Documentos\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterAPI.csproj",
+  "projectFilePath": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agend\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.9\\microsoft.aspnetcore.jsonpatch.5.0.9.nupkg.sha512",
     "C:\\Users\\agend\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.9\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.9.nupkg.sha512",

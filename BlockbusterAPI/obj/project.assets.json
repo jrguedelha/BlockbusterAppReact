@@ -860,11 +860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agend\\OneDrive\\Documentos\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterAPI.csproj",
-      "projectName": "BlockbusterAPI",
-      "projectPath": "C:\\Users\\agend\\OneDrive\\Documentos\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterAPI.csproj",
+      "projectUniqueName": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
+      "projectName": "BlockbusterApp",
+      "projectPath": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
       "packagesPath": "C:\\Users\\agend\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agend\\OneDrive\\Documentos\\Codes\\BlockbusterApp\\BlockbusterAPI\\obj\\",
+      "outputPath": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\agend\\AppData\\Roaming\\NuGet\\NuGet.Config",
