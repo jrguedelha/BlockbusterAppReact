@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 
+import {Home} from './Home';
+import {Movie} from './Movie';
+import {Genre} from './Genre';
+import {Navigation} from './Navigation';
+
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="Containernmp">
+        <h3 className="m-3 d-flex justify-content-center">
+          Movies Database
+        </h3>
+        
+        <Navigation/>
+
+        <Switch>
+          <Route path='/' component={Home} exact/>
+          <Route path='/movie' component={Movie}/>
+          <Route path='/genre' component={Genre}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
