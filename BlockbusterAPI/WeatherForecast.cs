@@ -4,8 +4,7 @@ namespace BlockbusterAPI
 {
     public class WeatherForecast
     {
-        public 
-            Time Date { get; set; }
+        public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlockbusterAPI.Models
+﻿namespace BlockbusterAPI.Models
 {
     public class Movie
     {

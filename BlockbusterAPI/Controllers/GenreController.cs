@@ -8,11 +8,11 @@ namespace BlockbusterAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MovieController : Controller
+    public class GenreController : Controller
     {
         private readonly IConfiguration _configuration;
 
-        public MovieController(IConfiguration configuration)
+        public GenreController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -22,7 +22,7 @@ namespace BlockbusterAPI.Controllers
         {
             string query = @"
                             SELECT Id, Title, ReleaseDate, IsActive
-                            FROM dbo.Movie
+                            FROM dbo.Genre
                             ";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
@@ -43,10 +43,10 @@ namespace BlockbusterAPI.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post(Movie movie)
+        public JsonResult Post(Genre genre)
         {
             string query = @"
-                            INSERT INTO dbo.Movie
+                            INSERT INTO dbo.Genre
                             (Title)
                             VALUES (@Title)
                             ";
@@ -58,7 +58,7 @@ namespace BlockbusterAPI.Controllers
                 dbConnection.Open();
                 using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@Title", movie.Title);
+                    sqlCommand.Parameters.AddWithValue("@Title", genre.Title);
                     dataReader = sqlCommand.ExecuteReader();
                     table.Load(dataReader);
                     dataReader.Close();
@@ -70,10 +70,10 @@ namespace BlockbusterAPI.Controllers
         }
 
         [HttpPut]
-        public JsonResult Put(Movie movie)
+        public JsonResult Put(Genre genre)
         {
             string query = @"
-                            UPDATE dbo.Movie
+                            UPDATE dbo.Genre
                             SET Title = @Title
                             WHERE Id = @Id
                             ";
@@ -85,8 +85,8 @@ namespace BlockbusterAPI.Controllers
                 dbConnection.Open();
                 using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@Id", movie.Id);
-                    sqlCommand.Parameters.AddWithValue("@Title", movie.Title);
+                    sqlCommand.Parameters.AddWithValue("@Id", genre.Id);
+                    sqlCommand.Parameters.AddWithValue("@Title", genre.Title);
                     dataReader = sqlCommand.ExecuteReader();
                     table.Load(dataReader);
                     dataReader.Close();
@@ -101,7 +101,7 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                            DELETE FROM dbo.Movie
+                            DELETE FROM dbo.Genre
                             WHERE Id = @Id
                             ";
             DataTable table = new DataTable();
@@ -124,4 +124,3 @@ namespace BlockbusterAPI.Controllers
         }
     }
 }
-
