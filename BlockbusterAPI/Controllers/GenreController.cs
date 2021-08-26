@@ -24,7 +24,7 @@ namespace BlockbusterAPI.Controllers
                             SELECT Id, Title,
                             CONVERT(varchar(10),ReleaseDate,120) as ReleaseDate,
                             IsActive
-                            FROM dbo.Movie
+                            FROM dbo.Genre
                            ";
             DataTable table = new DataTable();
             string dataSource = _configuration.GetConnectionString("BlockbusterAppCon");
@@ -48,8 +48,8 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Post(Genre genre)
         {
             string query = @"
-                            INSERT INTO dbo.Movie
-                            (Title,ReleaseDate,IsActive,Genre)
+                            INSERT INTO dbo.Genre
+                            (Title,ReleaseDate,IsActive)
                             VALUES
                             (
                             '" + genre.Title + @"'
@@ -78,7 +78,7 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Put(Genre genre)
         {
             string query = @"
-                            UPDATE dbo.Movie SET
+                            UPDATE dbo.Genre SET
                             Title = '" + genre.Title + @"'
                             , ReleaseDate = '" + genre.ReleaseDate + @"'
                             , IsActive = '" + genre.IsActive + @"'
@@ -106,7 +106,7 @@ namespace BlockbusterAPI.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                            DELETE FROM dbo.Movie
+                            DELETE FROM dbo.Genre
                             WHERE Id = " + id + @"
                            ";
             DataTable table = new DataTable();

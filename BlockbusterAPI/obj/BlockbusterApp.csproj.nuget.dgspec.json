@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj": {}
+    "D:\\Projects\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj": {
+    "D:\\Projects\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
+        "projectUniqueName": "D:\\Projects\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
         "projectName": "BlockbusterApp",
-        "projectPath": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
-        "packagesPath": "C:\\Users\\agend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agend\\Documents\\Codes\\BlockbusterApp\\BlockbusterAPI\\obj\\",
+        "projectPath": "D:\\Projects\\BlockbusterApp\\BlockbusterAPI\\BlockbusterApp.csproj",
+        "packagesPath": "C:\\Users\\carlosjr\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\BlockbusterApp\\BlockbusterAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\agend\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\carlosjr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

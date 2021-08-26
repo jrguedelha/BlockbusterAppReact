@@ -37,6 +37,8 @@ namespace BlockbusterAPI
             {
                 c.AddPolicy("AllowOrigin", options =>
                 options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                c.AddPolicy("AllowCredentials", options =>
+                options.AllowCredentials());
             });
             //JSON Serializer
             services.AddControllersWithViews().AddNewtonsoftJson(options =>

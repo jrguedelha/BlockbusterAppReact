@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import { Navbar,Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export class Navigation extends Component{
     render(){
@@ -10,13 +10,13 @@ export class Navigation extends Component{
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
                         <NavLink className="d-inline p-2 bg-dark text-white" to="/">
-                            Home
+                            Início
                         </NavLink>
                         <NavLink className="d-inline p-2 bg-dark text-white" to="/movie">
-                            Movie
+                            Filmes
                         </NavLink>
                         <NavLink className="d-inline p-2 bg-dark text-white" to="/genre">
-                            Genre
+                            Gêneros
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
